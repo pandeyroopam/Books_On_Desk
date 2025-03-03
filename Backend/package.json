@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for Books On Desk - A book management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandeyroopam/Books_On_Desk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandeyroopam/Books_On_Desk/issues"
+  },
+  "homepage": "https://github.com/pandeyroopam/Books_On_Desk#readme"
+}
