@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/pandeyroopam/Books_On_Desk/issues"
   },
-  "homepage": "https://github.com/pandeyroopam/Books_On_Desk#readme"
+  "homepage": "https://github.com/pandeyroopam/Books_On_Desk#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }
