@@ -1,22 +1,49 @@
-import React from 'react'
-
+import React from "react";
+import "./navbar.css";
 const Navbar = () => {
   return (
-       <nav className='bg-emerald-600 h-12 flex items-center justify-between p-4 text-white '>
-        <div> Books on Desk</div>
-        <div>
-        <ul className='flex justify-end items-center gap-8 font-semibold text-lg '>
-          <li>Home</li>
-          <li>About</li>
-          <li>Virtual Walkthrough</li>
-          <li>Contact</li>
-          <li>Community</li>
-          <li>Login</li>
-        </ul>
-        </div>
-       </nav>
-      
-  )
-}
+    <nav className="navbar">
+      <a className="title" href="/">
+        BooksOnDesk
+      </a>
 
-export default Navbar
+      <form action="" className="search-box">
+        <input
+          type="text"
+          name="search"
+          placeholder="Search here"
+          className="search-input"
+          required
+        />
+
+        <button type="submit">
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div>
+        <ul className="menuItems">
+          <li>
+            <a className="content" href="#browse">Browse</a>
+          </li>
+          <li>
+            <a className="content" href="#about">About</a>
+          </li>
+          <li>
+            <a className="content" href="#addbooks">AddBooks</a>
+          </li>
+          <li>
+            <a className="content" href="#commmunity">Community</a>
+          </li>
+          <li>
+            <a className="login log-sig" href="#login">Log In</a>
+          </li>
+          <li>
+            <a className="signup log-sig" href="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
