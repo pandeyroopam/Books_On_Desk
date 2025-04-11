@@ -1,0 +1,106 @@
+.main-body
+{
+    height: 100%;
+    /* border: 3px solid green; */
+
+}
+
+.main-about
+{    
+    margin-bottom: 30px;
+    height: 80vh;
+    width: 100%;
+    border: 2.5px solid rgba(115, 161, 176, 0.6);
+    border-radius: 20px;
+    box-shadow: 6px 6px 5px  rgba(103, 162, 182, 0.6);
+    
+}
+
+.main-title{
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Black Ops One", system-ui;
+    color: rgb(3, 3, 103);
+}
+
+.about-container
+{
+    margin: 40px 20px;
+    height: 55vh;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.about
+{
+    padding: 10px;
+    height: 55vh;
+    width: 45vw;
+    /* border: 3px solid rgb(233, 12, 12); */
+
+}
+
+.about-img
+{
+    margin: 12px 90px;
+    height: 30vh;
+    width: 17vw;
+    /* border: 3px solid black; */
+    background-image: url("./about/boy2.png");
+    background-position: center;
+    background-size: contain;
+   
+}
+
+.about p{
+    margin: 0;
+    /* border: 3px solid green; */
+    text-align: center;
+}
+
+.img-title
+{
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.book-cat
+{
+    /* padding-bottom: 3px; */
+    padding-top: 25px;
+    margin-bottom: 28px;
+    height: 55vh;
+    /* border: 5px solid red; */
+    /* background: rgb(198,211,216);
+    background: linear-gradient(0deg, rgba(198,211,216,1) 0%, rgba(235,238,254,1) 49%, rgba(184,212,221,1) 100%); */
+
+    background: rgb(209,243,255);
+    background: linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%);
+    border-radius: 4px;
+}
+
+.book-cat-name
+{
+    color: rgb(3, 3, 103);
+    margin-left: 25px;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Black Ops One", system-ui ;
+}
+
+.book-cat-name:hover
+{
+    text-shadow: 0 0 4px #6ba3f7c5;
+}
+.educational-book
+{
+    
+}
+
+
