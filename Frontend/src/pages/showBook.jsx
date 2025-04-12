@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../pages/navbar";
+import Navbar from "../components/navbar";
 import { useState } from "react";
 
 const ShowBook = () => {

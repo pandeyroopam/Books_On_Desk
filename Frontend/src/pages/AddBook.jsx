@@ -1,45 +1,47 @@
-import React from "react";
-import Navbar from "../pages/navbar";
+import Navbar from "../components/navbar";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const AddBook = () => {
  
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = async (data) => {
-    try {
-      const response = await fetch("http://localhost:8080/books", {
-        method: "POST",
-        headers: {
-          "content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
 
-      if(!response.ok){
-        throw new Error("Network response was not ok");
-      }
-       alert("Book details added successfully");
-        navigate("/ShowBook");
+  // const onSubmit = async (data) => {
+  //   try {
+  //     const response = await fetch("http://localhost:8080/books", {
+  //       method: "POST",
+  //       headers: {
+  //         "content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+
+  //     if(!response.ok){
+  //       throw new Error("Network response was not ok");
+  //     }
+  //      alert("Book details added successfully");
+  //       navigate("/ShowBook");
          
-    } catch (error) {
-      alert("Error in adding the book details", error.message);
-    }
-  };
+  //   } catch (error) {
+  //     alert("Error in adding the book details", error.message);
+  //   }
+  // };
   return (
     <>
       <Navbar />
 
-      <div className="h-full w-full flex items-center m-5 flex-col">
+      <div className=" flex items-center flex-col" >
         {/* form for taking input of the user about the book */}
-        <form
-          onSubmit={handleSubmit(onSubmit)}
+        <form style={{
+      background: "linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%)"
+    }}
+          // onSubmit={handleSubmit(onSubmit)}
           className="w-8/12 shadow-lg border-gray-100 border-2 rounded-md p-5 m-2"
         >
           <h2 className="text-xl text-center font-bold">
