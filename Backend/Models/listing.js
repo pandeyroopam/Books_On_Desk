@@ -7,10 +7,12 @@ const listingSchema = new Schema({
         type : String,
         required: true,
     },
-    image : {
+    images :[
+         {
         url : String,
         filename: String,
-    },
+    }
+],
     description: {
         type: String,
     },
@@ -23,10 +25,25 @@ const listingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: User,
     },
-    isdc : {
+    isbn : {
         type: Number,
         required: true,
     },
     genre : [String],
+    condition : {
+         type: String,
+         enum: ['New', 'Good', 'Average'],
+    },
+    forRent: {
+        type: Boolean,
+        default: true,
+    },
+    forSale: {
+        type: Boolean,
+        default: false,
+    },
     
-})
+});
+
+const Listing = mongoose.model('Listing', listingSchema);
+module.exports = Listing;

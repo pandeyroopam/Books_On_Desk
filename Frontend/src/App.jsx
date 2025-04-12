@@ -15,8 +15,8 @@ function App() {
         element: <Home/>,
       },
       {
-        path: "/ShowBook",
-        element: <ShowBook/>,
+        path: "/Community",
+        element: <Community/>,
       },
       {
         path: "/AddBook",

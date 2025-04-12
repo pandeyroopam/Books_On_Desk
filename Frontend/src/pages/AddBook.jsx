@@ -1,46 +1,42 @@
 import Navbar from "../components/navbar";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
+import { useState } from "react";
+import ImageUploader from "../components/ImageUploader";
+const genreOptions = [
+  { value: "Fiction", label: "Fiction" },
+  { value: "Romance", label: "Romance" },
+  { value: "Mystery", label: "Mystery" },
+  { value: "Science", label: "Science" },
+  { value: "History", label: "History" },
+  { value: "Fantasy", label: "Fantasy" },
+];
+
 // import { useNavigate } from "react-router-dom";
 
 const AddBook = () => {
- 
   // const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+    control,
     watch,
     formState: { errors },
   } = useForm();
 
-  // const onSubmit = async (data) => {
-  //   try {
-  //     const response = await fetch("http://localhost:8080/books", {
-  //       method: "POST",
-  //       headers: {
-  //         "content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data),
-  //     });
+  const [files, setFiles] = useState([]);
 
-  //     if(!response.ok){
-  //       throw new Error("Network response was not ok");
-  //     }
-  //      alert("Book details added successfully");
-  //       navigate("/ShowBook");
-         
-  //   } catch (error) {
-  //     alert("Error in adding the book details", error.message);
-  //   }
-  // };
   return (
     <>
       <Navbar />
 
-      <div className=" flex items-center flex-col" >
+      <div className=" flex items-center flex-col">
         {/* form for taking input of the user about the book */}
-        <form style={{
-      background: "linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%)"
-    }}
+        <form
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%)",
+          }}
           // onSubmit={handleSubmit(onSubmit)}
           className="w-8/12 shadow-lg border-gray-100 border-2 rounded-md p-5 m-2"
         >
@@ -48,29 +44,9 @@ const AddBook = () => {
             Add your Book details
           </h2>
 
-          <div>c
-            <label className="my-0.5 text-lg font-medium">ISBN Number</label>
-            <input
-              type="text"
-              className="mx-2 outline-gray-400 rounded-md"
-              placeholder="Enter your book Isbn number"
-              {...register("isbn", { required: true })}
-            />
-            {errors.isbn && (
-              <div className="text-red-500">Enter a valid isbn name</div>
-            )}
-          </div>
+          <ImageUploader/>
 
-          <div className="my-4">
-            <input type="file" accept="image/*" capture="environment" />
-            <button
-              type="button"
-              className="ml-2 p-1 bg-blue-500 text-white rounded-md"
-            >
-              Upload
-            </button>
-          </div>
-
+          {/* Book description */}
           <div className="my-4">
             <label className="my-0.5 text-lg font-medium">Summary</label>
             <textarea
@@ -86,6 +62,7 @@ const AddBook = () => {
             )}
           </div>
 
+          {/*  Author name              */}
           <div className="flex gap-20 my-4">
             <div>
               <label className="text-lg font-medium">Author</label>
@@ -99,6 +76,7 @@ const AddBook = () => {
               )}
             </div>
 
+            {/* Book title */}
             <div>
               <label className="text-lg font-medium">Book Title</label>
               <input
@@ -112,7 +90,8 @@ const AddBook = () => {
             </div>
           </div>
 
-          <div className="flex gap-20 my-4">
+          <div className="flex gap-20 my-1">
+            {/* Book price */}
             <div className="my-4">
               <label className="text-lg font-medium">Price</label>
               <input
@@ -126,24 +105,54 @@ const AddBook = () => {
               )}
             </div>
 
+            {/* isbn number */}
             <div className="my-4">
-              <label className="text-lg font-medium">Genre</label>
+              <label className="my-0.5 text-lg font-medium">ISBN Number</label>
               <input
-                className="border-gray-400 outline-gray-400 rounded-md"
                 type="text"
-                {...register("genre", { required: true })}
+                className="mx-2 outline-gray-400 rounded-md"
+                placeholder="Enter your book Isbn number"
+                {...register("isbn", { required: true })}
               />
-              {errors.genre && (
-                <div className="text-red-500">Enter a valid genre</div>
+              {errors.isbn && (
+                <div className="text-red-500">Enter a valid isbn name</div>
               )}
             </div>
+          </div>
 
+          {/* Book genre */}
+          <div className="my-4 w-full">
+            <label className="text-lg font-medium">Genre</label>
+            <Controller
+              name="genre"
+              control={control}
+              rules={{ required: true }}
+              render={({ field }) => (
+                <Select
+                  {...field}
+                  isMulti
+                  options={genreOptions}
+                  className="mt-2"
+                  classNamePrefix="select"
+                />
+              )}
+            />
+            {errors.genre && (
+              <p className="text-red-500 text-sm">
+                Please select at least one genre
+              </p>
+            )}
+          </div>
+
+          <div className="flex gap-20 my-1">
+            {/* Book condition */}
             <div className="my-4">
               <label className="text-lg font-medium">Book Condition</label>
               <select
-                className="mx-2 outline-gray-400 rounded-md"
+                className="m-2 p-2 outline-gray-400 rounded-md"
                 {...register("condition")}
               >
+                <option value="">-- Select --</option>
                 <option value="New">New</option>
                 <option value="Good">Good</option>
                 <option value="Average">Average</option>
@@ -152,23 +161,24 @@ const AddBook = () => {
                 <div className="text-red-500">Select one of the option</div>
               )}
             </div>
+
+            {/* for sell and rent option */}
+            <div className="my-4">
+              <label className="text-lg font-medium">Listing Type</label>
+              <select
+                className="m-2 p-2 outline-gray-400 rounded-md"
+                {...register("condition1")}
+              >
+                <option value="">-- Select --</option>
+                <option value="New">Rent</option>
+                <option value="Good">Sell</option>
+              </select>
+              {errors.condition1 && (
+                <div className="text-red-500">Select one of the option</div>
+              )}
+            </div>
           </div>
 
-          <div className="my-4">
-            <label className="text-lg font-medium">Location</label>
-            <input
-              className="border-gray-400 outline-gray-400 rounded-md"
-              type="text"
-              {...register("location", {
-                required: true,
-                minLength: 5,
-                maxLength: 50,
-              })}
-            />
-            {errors.location && (
-              <div className="text-red-500 ">Enter a valid location</div>
-            )}
-          </div>
           <div className="my-4 flex justify-center">
             <input
               type="submit"
