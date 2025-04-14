@@ -16,7 +16,7 @@ const Mainbody = () => {
                 
                 </div>
                 <p className="img-title">
-                    Read Books
+                    READ BOOK
                 </p> 
                 <p>
                     Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
@@ -27,7 +27,7 @@ const Mainbody = () => {
                     
                 </div>
                 <p className="img-title">
-                    Read Books
+                    BOOK RENTING
                 </p> 
                 <p>
                     Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
@@ -41,7 +41,7 @@ const Mainbody = () => {
                 </div>
 
                 <p className="img-title">
-                    Read Books
+                    EARN MONEY
                 </p> 
                 <p>
                     Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
@@ -73,26 +73,26 @@ const Mainbody = () => {
         </div>
 
         <div className="main-about">
-        <p className="main-title"> ABOUT 2 </p>
+        <p className="main-title"> Services We Are Providing! </p>
 
 <div className="about-container">
 <div className="about">
-    <div className="about-img  img1">
+    <div className="about-img  img4">
     
     </div>
     <p className="img-title">
-        Read Books
+        FREE SHIPPING
     </p> 
     <p>
         Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
     </p>
 </div>
 <div className="about">
-    <div className="about-img img2">
+    <div className="about-img img5">
         
     </div>
     <p className="img-title">
-        Read Books
+        BUILD YOUR COMMUNITY
     </p> 
     <p>
         Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
@@ -101,12 +101,12 @@ const Mainbody = () => {
 
 </div>
 <div className="about">
-    <div className="about-img img3">
+    <div className="about-img img6">
         
     </div>
 
     <p className="img-title">
-        Read Books
+        USER LISTING
     </p> 
     <p>
         Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.

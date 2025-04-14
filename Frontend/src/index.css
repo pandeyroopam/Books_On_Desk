@@ -11,11 +11,16 @@ body{
     /* border: 7px solid purple; */
 
     /* background: rgb(208,240,255);
-    background: radial-gradient(circle, rgba(208,240,255,1) 76%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgba(212,229,255,1) 95%); */
-    background: rgb(165,192,250);
-    background: radial-gradient(circle, rgba(165,192,250,1) 33%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgba(212,229,255,1) 95%);
-    /* background: rgb(154,184,249);
-    background: radial-gradient(circle, rgba(154,184,249,1) 27%, rgba(106,157,247,1) 44%, rgba(126,160,232,1) 50%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgba(212,229,255,1) 95%); */
+    background: radial-gradient(circle, rgb(129, 212, 251) 76%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgb(166, 201, 255) 95%); */
+
+    /* background: rgb(165,192,250);
+    background: radial-gradient(circle, rgba(165,192,250,1) 33%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgba(212,229,255,1) 95%); */
+
+    background: rgb(154,184,249);
+    background: radial-gradient(circle, rgba(154,184,249,1) 27%, rgba(106,157,247,1) 44%, rgba(126,160,232,1) 50%, rgba(230,252,255,0.9971638313528537) 90%, rgba(191,243,255,1) 90%, rgba(212,229,255,1) 95%);
+
+    /* background: #7fc9c9;
+    background: radial-gradient(circle, rgba(127, 201, 201, 1) 0%, rgba(168, 204, 230, 1) 59%, rgba(141, 221, 252, 1) 89%, rgba(92, 171, 250, 1) 84%); */
 
               /*   #d4e5ff  */
 }

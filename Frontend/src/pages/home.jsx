@@ -1,9 +1,10 @@
 import React from 'react'
 import './home.css';
-import Navbar from '../pages/navbar'
-import  Carousel from '../pages/carousel'
-import Mainbody from '../pages/mainbody';
-import Footer from '../pages/footer';
+import Navbar from '../components/navbar'
+import  Carousel from '../components/carousel'
+import Mainbody from '../components/mainbody';
+import Footer from '../components/footer';
+import FormSection from '../components/formSection';
 const home = () => {
   return (
 
@@ -16,6 +17,10 @@ const home = () => {
     </div>
     <div className='landing-page-body'>
       <Mainbody/>
+
+    </div>
+    <div className='form-input'>
+      <FormSection/>
 
     </div>
     <div className='Footer-div'>

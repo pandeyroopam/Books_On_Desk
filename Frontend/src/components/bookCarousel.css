@@ -1,0 +1,133 @@
+.book-div
+{
+    margin: 3px 10px;
+    height: 52vh;
+    /* border: 3px solid brown; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* transition: .1s ease-in; */
+}
+
+
+.book-container
+{
+    margin-right: 4px;
+    padding: 2px; 
+    width: 15vw;
+    height: 45vh;
+    /* border: 5px solid green; */
+   
+}
+
+.book-itself
+{
+    margin-left: 18px;
+    height: 37vh;
+    width: 12vw;
+    /* border: 3px solid orange; */
+    border-radius: 5px;
+    background-image: url("./books/book1.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease-in;
+}
+
+.book-itself:hover
+{
+    /* height: 37.5vh;
+    width: 12.5vw;
+    transition: .3s ease-in; */
+    transform: scale(1.03);
+}
+
+.book-itself-card
+{
+    padding-top: 100px;
+    padding-left: 10px;
+    border-top: 3px solid rgb(230, 173, 207);
+    border-left: 3px solid lightblue ;
+    border-radius: 7px;
+    margin: 0px;
+    height: 36vh;
+    width: 11.6vw;
+    color: aliceblue;
+    /* text-align: center; */
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.719);
+    font-size: 12px;
+    transition: transform 0.5s ease-out ;
+    
+}
+
+.book-itself-card:hover{
+    opacity: 1;
+    transform: scale(1.02);
+
+
+}
+
+.book-info
+{
+    width: 13vw;
+    height: 10vh;
+    /* border: 2px solid black; */
+    margin: 5px 8px ;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.book-btn{
+    /* margin-top: 15px; */
+    border: 3px solid rgb(5, 5, 144);
+    border-radius: 20px;
+    width: 5.5rem;
+    height: 2.5rem;
+    color: rgb(5, 5, 144) ;
+    font-weight: 500;
+    /* box-shadow: 0 2px 4px 0 rgba(152, 202, 245, 0.508), 0 3px 6px 0 rgba(144, 210, 243, 0.39); */
+
+ }
+.book-btn:hover{
+    background-color:  rgb(5, 5, 144);
+    color: rgb(255, 246, 230);
+    box-shadow: 0 4px 4px 0 rgba(129, 162, 192, 0.878), 0 6px 6px 0 rgba(90, 98, 191, 0.664);
+ }
+
+
+ .nav-box
+ {
+    width: 4vw;
+    height: 37vh;
+    /* border: 3px solid rgb(47, 83, 202); */
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(12, 6, 85);
+
+ }
+
+ .nav-button
+ {
+    /* border: none; */
+    margin-top: 100px;
+    font-size: 43px;
+    font-weight: 700;
+ }
+  .book-div .nav-box{
+    /* opacity: 0; */
+    display: none;
+    /* pointer-events: none;*/
+    transition: .2s ease-in; 
+   
+ } 
+ .book-div:hover .nav-box
+ {
+    /* opacity: 1; */
+    display: inline-block;
+    transition: .2s ease-in;
+    /* pointer-events: auto; */
+ }
+
+ .nav-box:hover{
+    background-color: rgb(61, 176, 234);
+ }
