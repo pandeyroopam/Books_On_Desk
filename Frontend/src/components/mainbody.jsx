@@ -18,8 +18,8 @@ const Mainbody = () => {
                 <p className="img-title">
                     READ BOOK
                 </p> 
-                <p>
-                    Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+                <p className="img-detail">
+                    Discover the books you love without the hassle. From academic texts to timeless novels, find what you need—all in one place, just a few clicks away.
                 </p>
             </div>
             <div className="about">
@@ -29,8 +29,8 @@ const Mainbody = () => {
                 <p className="img-title">
                     BOOK RENTING
                 </p> 
-                <p>
-                    Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+                <p  className="img-detail">
+                    Why buy when you can rent? Get your favorite books at a fraction of the cost for the time you need—perfect for students and budget readers.
                 </p>
 
 
@@ -43,8 +43,8 @@ const Mainbody = () => {
                 <p className="img-title">
                     EARN MONEY
                 </p> 
-                <p>
-                    Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+                <p  className="img-detail">
+                    Turn your bookshelf into a side hustle. Rent or sell your books to others in need and earn while giving your books a new life.
                 </p>
             </div>
 
@@ -83,8 +83,8 @@ const Mainbody = () => {
     <p className="img-title">
         FREE SHIPPING
     </p> 
-    <p>
-        Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+    <p  className="img-detail">
+        Enjoy hassle-free delivery with no extra charges. We make it easier for you to get the books you love—delivered right to your doorstep, absolutely free.
     </p>
 </div>
 <div className="about">
@@ -93,9 +93,9 @@ const Mainbody = () => {
     </div>
     <p className="img-title">
         BUILD YOUR COMMUNITY
-    </p> 
-    <p>
-        Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+    </p > 
+    <p  className="img-detail">
+       Connect with fellow readers, share notes, and dive deep into your favorite genres. Create or join communities that make reading more social and fun.
     </p>
 
 
@@ -108,8 +108,8 @@ const Mainbody = () => {
     <p className="img-title">
         USER LISTING
     </p> 
-    <p>
-        Get yourself a book and live yourlife as book lover. we land you hand that will provide you books that you want to read at a minimal amount.Boost you passion as book lover.
+    <p  className="img-detail">
+         List your books in just a few steps! Whether you're selling or renting, our simple system helps your books find the right readers fast.
     </p>
 </div>
 

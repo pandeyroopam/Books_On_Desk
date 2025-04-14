@@ -27,10 +27,34 @@
     width: 12vw;
     /* border: 3px solid orange; */
     border-radius: 5px;
-    background-image: url("./books/book1.jpg");
+    /* background-image: url("./books/book1.jpg"); */
     background-position: center;
     background-size: cover;
     transition: transform 0.5s ease-in;
+}
+.book1
+{
+    background-image: url("./books/book1.jpg");
+}
+.book2
+{
+    background-image: url("./books/book2.jpg");
+}
+.book3
+{
+    background-image: url("./books/book3.jpg");
+}
+.book4
+{
+    background-image: url("./books/book4.jpg");
+}
+.book5
+{
+    background-image: url("./books/book5.jpg");
+}
+.book6
+{
+    background-image: url("./books/book6.jpg");
 }
 
 .book-itself:hover
@@ -43,7 +67,7 @@
 
 .book-itself-card
 {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-left: 10px;
     border-top: 3px solid rgb(230, 173, 207);
     border-left: 3px solid lightblue ;

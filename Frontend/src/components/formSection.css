@@ -97,3 +97,23 @@ input
 button, i {
     cursor: pointer;
 }
+
+.form-submit
+{
+    padding: 5.5px 8px;
+    height: 2.7rem;
+    width: 7rem;
+    border: 3px solid rgb(5, 5, 144);
+    text-align: center;
+    border-radius: 25px;
+    color: rgb(5, 5, 144) ;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 215px;
+}
+.form-submit:hover{
+    background-color:  rgb(5, 5, 144);
+    color: rgb(255, 246, 230);
+    box-shadow: 0 4px 4px 0 rgba(129, 162, 192, 0.878), 0 6px 6px 0 rgba(90, 98, 191, 0.664);
+    cursor: pointer;
+}

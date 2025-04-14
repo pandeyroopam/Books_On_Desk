@@ -10,15 +10,17 @@
     margin-bottom: 40px;
     height: 80vh;
     width: 100%;
-    border: 2.5px solid rgba(115, 161, 176, 0.6);
+    border: 2px solid rgba(55, 70, 75, 0.6);
     border-radius: 10px;
-    box-shadow: 6px 10px 3px  rgba(89, 124, 135, 0.6);
+    box-shadow: 6px 10px 3px  rgba(52, 66, 73, 0.436);
 
     /* background: #97a6e6;
     background: radial-gradient(circle, rgba(151, 166, 230, 1) 85%, rgba(117, 165, 255, 1) 53%, rgba(78, 168, 204, 1) 100%); */
 
     background: #bcc5e3;
-    background: radial-gradient(circle, rgba(188, 197, 227, 1) 85%, rgba(160, 189, 242, 1) 53%, rgba(124, 200, 230, 1) 100%);
+    background: radial-gradient(circle, rgba(191, 219, 227, 0.674) 85%, rgba(160, 189, 242, 1) 53%, rgba(124, 200, 230, 1) 100%);
+
+    /* background-color: transparent; */
 
     
 }
@@ -103,9 +105,21 @@
 
 .img-title
 {
-    font-weight: 700;
+    font-weight: 800;
     font-family: inherit;
     font-size: 20px;
+}
+
+.img-detail
+{
+    /* border: 2px solid black; */
+    width: 25vw;
+}
+
+.about .img-detail
+{
+    margin-left: 38px;
+    font-weight: 500;
 }
 
 .book-cat
@@ -120,7 +134,7 @@
     background: linear-gradient(0deg, rgba(198,211,216,1) 0%, rgba(235,238,254,1) 49%, rgba(184,212,221,1) 100%); */
 
     background: rgb(209,243,255);
-    background: linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%);
+    background: linear-gradient(0deg, rgba(195, 239, 255, 0.903) 0%, rgba(255,255,255,1) 49%,rgba(195, 239, 255, 1) 100%);
     border-radius: 4px;
 }
 
