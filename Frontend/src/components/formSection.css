@@ -1,0 +1,119 @@
+.contact {
+    height: 85vh;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid rgb(171, 193, 207); */
+}
+.contact .content-left {
+    width: 60%;
+    height: 30rem;
+    position: relative;
+    /* border: 3px solid purple; */
+}
+h2 {
+    margin-top: 60px;
+    display: block;
+    font-size: 2rem;
+    width: 53vw;
+    font-weight: 500;
+    font-family: "Poetsen One", sans-serif;
+    /* border: 3px solid black; */
+}
+.form-p{
+    margin: 10px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: 550;
+    color: rgb(7, 7, 128);
+}
+.fa-brands, .fab {
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 40px;
+}
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+}
+
+.contact-form {
+    /* flex-basis: 40%; */
+    padding: 30px 15px;
+    width: 40%;
+    height: 30rem;
+    border-radius: 8px;
+    /* border: 3px solid purple; */
+}
+.contact-form form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+   
+}
+.contact-form .input-grp:nth-of-type(-n+2) {
+    flex-basis: 45%;
+    flex-grow: 1;
+}
+
+.contact-form .input-grp {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-grp
+{
+    /* border: 2px solid black; */
+}
+input
+{
+    width: 100%;
+    border-bottom: 2px solid rgb(26, 22, 22);
+}
+#email
+{
+    border-bottom: 2px solid rgb(26, 22, 22);
+    width: 33.5vw;
+}
+.form-text
+{
+    border-bottom: 2px solid  rgb(26, 22, 22) ;
+    width: 33.5vw;
+}
+.contact-form button {
+    height: 4rem;
+    width: 15rem;
+    font-size: 1.6rem;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    background-color: transparent;
+    transition: all .3s;
+}
+
+button, i {
+    cursor: pointer;
+}
+
+.form-submit
+{
+    padding: 5.5px 8px;
+    height: 2.7rem;
+    width: 7rem;
+    border: 3px solid rgb(5, 5, 144);
+    text-align: center;
+    border-radius: 25px;
+    color: rgb(5, 5, 144) ;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 215px;
+}
+.form-submit:hover{
+    background-color:  rgb(5, 5, 144);
+    color: rgb(255, 246, 230);
+    box-shadow: 0 4px 4px 0 rgba(129, 162, 192, 0.878), 0 6px 6px 0 rgba(90, 98, 191, 0.664);
+    cursor: pointer;
+}
