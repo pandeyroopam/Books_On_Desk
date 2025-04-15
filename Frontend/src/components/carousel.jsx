@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import img1 from "../images/1.jpg";
-import img2 from "../images/2.avif";
-import img3 from "../images/3.png";
-import "./carousel.css";
-
-const images = [img1, img2, img3];
-
-const Carousel = () => {
-  const [index, setIndex] = useState(0);
-
-  const nextSlide = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="carousel-container">
-      <button className="nav left" onClick={prevSlide}>
-        ❮
-      </button>
-      <img
-        src={images[index]}
-        alt={`Slide ${index + 1}`}
-        className="carousel-img"
-      />
-      <button className="nav right" onClick={nextSlide}>
-        ❯
-=======
 // import React, { useState, useEffect } from 'react';
 // import img1 from '../images/1.jpg';
 // import img2 from '../images/2.avif';
@@ -105,14 +67,9 @@ const Carousel = () => {
       </button>
       <button className="nav right" onClick={nextSlide}>
         &#10095;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
       </button>
     </div>
   );
 };
 
 export default Carousel;
-<<<<<<< HEAD
-=======
-
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143

@@ -1,15 +1,5 @@
 .book-div
 {
-<<<<<<< HEAD
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    height: 45vh;
-    /* border: 3px solid black; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-=======
     margin: 3px 10px;
     height: 52vh;
     /* border: 3px solid brown; */
@@ -17,7 +7,6 @@
     justify-content:space-between;
     align-items: center;
     /* transition: .1s ease-in; */
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 }
 
 
@@ -37,17 +26,6 @@
     height: 37vh;
     width: 12vw;
     /* border: 3px solid orange; */
-<<<<<<< HEAD
-    background-image: url("./books/book1.jpg");
-    background-position: center;
-    background-size: cover;
-}
-.book-container p
-{
-    text-align: center;
-    margin-top: 3px;
-}
-=======
     border-radius: 5px;
     /* background-image: url("./books/book1.jpg"); */
     background-position: center;
@@ -177,4 +155,3 @@
  .nav-box:hover{
     background-color: rgb(61, 176, 234);
  }
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143

@@ -7,12 +7,6 @@ const Footer = () => {
     
        <footer>
 
-<<<<<<< HEAD
-        <p>  contact us </p> 
-        <p> @copyrigths</p>
-
-
-=======
         <p className="footer-heading">Feel Free! to contact us everytime between 10:00 AM and 10:00 PM</p>
         <div className="footer-container">
 
@@ -62,7 +56,6 @@ const Footer = () => {
           </div>
 
         </div>
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 
 
        </footer>

@@ -1,22 +1,4 @@
 footer{
-<<<<<<< HEAD
-    padding: 20px;
-    height: 50vh;
-    border-radius: 10px;
-    /* border: 10px solid blueviolet; */
-    background-color: rgba(0, 0, 0, 0.729);
-}
-
-footer p{
-    text-align: center;
-    color: rgb(255, 253, 251);
-}
-footer p:hover 
-{
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 18px;
-=======
     /* padding: 20px; */
     height: 70vh;
     border-radius: 10px;
@@ -157,5 +139,4 @@ footer p{
 {
     margin-right: 30px;
     color: rgb(192, 192, 192);
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 }

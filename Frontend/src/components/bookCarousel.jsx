@@ -3,37 +3,6 @@ import "./bookCarousel.css";
 const BookCarousel = () => {
   return (
     <>
-<<<<<<< HEAD
-      <div>
-        <div className="book-div">
-          <div className="book-container ">
-            <div className="book-itself"></div>
-            <p>Book Info</p>
-          </div>
-          <div className="book-container ">
-            <div className="book-itself"></div>
-            <p>Book Info</p>
-          </div>
-          <div className="book-container ">
-            <div className="book-itself"></div>
-            <p>Book Info</p>
-          </div>
-          <div className="book-container ">
-            <div className="book-itself"></div>
-            <p>Book Info</p>
-          </div>
-          <div className="book-container ">
-            <div className="book-itself"></div>
-            <p>Book Info</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default BookCarousel;
-=======
         <div>
             
             <div className="book-div">
@@ -129,4 +98,3 @@ export default BookCarousel;
 }
 
 export default BookCarousel;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143

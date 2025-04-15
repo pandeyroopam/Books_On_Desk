@@ -7,14 +7,6 @@
 
 .main-about
 {    
-<<<<<<< HEAD
-    margin-bottom: 30px;
-    height: 80vh;
-    width: 100%;
-    border: 2.5px solid rgba(115, 161, 176, 0.6);
-    border-radius: 20px;
-    box-shadow: 6px 6px 5px  rgba(103, 162, 182, 0.6);
-=======
     margin-bottom: 40px;
     height: 80vh;
     width: 100%;
@@ -30,7 +22,6 @@
 
     /* background-color: transparent; */
 
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
     
 }
 
@@ -39,15 +30,10 @@
     margin-top: 10px;
     font-size: 35px;
     font-weight: 700;
-<<<<<<< HEAD
-    font-family: "Black Ops One", system-ui;
-    color: rgb(3, 3, 103);
-=======
     /* font-family: "Black Ops One", system-ui; */
     font-family: "Poetsen One", sans-serif;
     color: rgb(3, 3, 103);
     text-align: center;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 }
 
 .about-container
@@ -76,17 +62,11 @@
     height: 30vh;
     width: 17vw;
     /* border: 3px solid black; */
-<<<<<<< HEAD
-    background-image: url("./about/boy2.png");
-=======
     /* background-image: url("./about/boy2.png"); */
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
     background-position: center;
     background-size: contain;
    
 }
-<<<<<<< HEAD
-=======
 .img1
 {
     background-image: url("./about/boy2.png");
@@ -116,7 +96,6 @@
     background-image: url("./about/listingg.png");
     background-size: cover;
 }
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 
 .about p{
     margin: 0;
@@ -126,23 +105,11 @@
 
 .img-title
 {
-<<<<<<< HEAD
-    font-weight: 700;
-=======
     font-weight: 800;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
     font-family: inherit;
     font-size: 20px;
 }
 
-<<<<<<< HEAD
-.book-cat
-{
-    /* padding-bottom: 3px; */
-    padding-top: 25px;
-    margin-bottom: 28px;
-    height: 55vh;
-=======
 .img-detail
 {
     /* border: 2px solid black; */
@@ -162,17 +129,13 @@
     padding-top: 25px;
     margin-bottom: 28px;
     height: 65vh;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
     /* border: 5px solid red; */
     /* background: rgb(198,211,216);
     background: linear-gradient(0deg, rgba(198,211,216,1) 0%, rgba(235,238,254,1) 49%, rgba(184,212,221,1) 100%); */
 
     background: rgb(209,243,255);
-<<<<<<< HEAD
     background: linear-gradient(0deg, rgba(209,243,255,1) 0%, rgba(255,255,255,1) 49%, rgba(199,241,255,1) 100%);
-=======
-    background: linear-gradient(0deg, rgba(195, 239, 255, 0.903) 0%, rgba(255,255,255,1) 49%,rgba(195, 239, 255, 1) 100%);
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
+    /* background: linear-gradient(0deg, rgba(195, 239, 255, 0.903) 0%, rgba(255,255,255,1) 49%,rgba(195, 239, 255, 1) 100%); */
     border-radius: 4px;
 }
 
@@ -182,12 +145,8 @@
     margin-left: 25px;
     font-size: 23px;
     font-weight: 600;
-<<<<<<< HEAD
-    font-family: "Black Ops One", system-ui ;
-=======
     /* font-family: "Black Ops One", system-ui ; */
     font-family: "Poetsen One", sans-serif;
->>>>>>> 3291ee9bea01882694e61e1d6f4adf95c474c143
 }
 
 .book-cat-name:hover
