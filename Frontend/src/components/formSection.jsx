@@ -8,7 +8,7 @@ const FormSection = () => {
 <section class="contact">
             <div className="content-left">
                 <h2>“Books On Desk – One Platform, Infinite Possibilities”</h2>
-                <p className="form-p">
+                <p className="formm-p">
                     Rent. Sell. Connect. A community built around stories. Join the journey.
                 </p>
                 <div>
@@ -18,7 +18,7 @@ const FormSection = () => {
                 </div>
             </div>
             <div className="contact-form shadow-lg bg-neutral-200">
-                <form action="" name="contact-form">
+                <form className="formm" action="" name="contact-form">
                     <div className="input-grp">
                         <label for="fname">First Name</label>
                         <input type="text" name="fname"/>
@@ -35,7 +35,7 @@ const FormSection = () => {
                         <label for="msg">Leave us a message</label>
                         <textarea className="form-text" name="msg"></textarea>
                     </div>
-                    <submit form="contact-form" className="form-submit" >Submit</submit>
+                    <submit form="contact-form" className="formm-submit" >Submit</submit>
                 </form>
             </div>
         </section>

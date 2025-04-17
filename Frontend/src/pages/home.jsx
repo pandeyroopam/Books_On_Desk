@@ -1,18 +1,16 @@
 import React from "react";
 import "./home.css";
 import Navbar from "../components/navbar";
-import Carousel from "../components/carousel";
+import Carousels from "../components/Carousels";
 import Mainbody from "../components/mainbody";
 import Footer from "../components/footer";
 import FormSection from "../components/formSection";
 const home = () => {
   return (
     <>
-      <div className="nav-divs">
         <Navbar />
-      </div>
       <div className="carousel-div">
-        <Carousel />
+        <Carousels />
       </div>
       <div className="landing-page-body">
         <Mainbody />

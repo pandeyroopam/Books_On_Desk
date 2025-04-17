@@ -1,8 +1,11 @@
 import Navbar from "../components/navbar";
+import { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import Select from "react-select";
 import { useState } from "react";
 import ImageUploader from "../components/ImageUploader";
+import { useNavigate } from "react-router-dom";
+
 const genreOptions = [
   { value: "Fiction", label: "Fiction" },
   { value: "Romance", label: "Romance" },
@@ -15,6 +18,17 @@ const genreOptions = [
 // import { useNavigate } from "react-router-dom";
 
 const AddBook = () => {
+  const navigate = useNavigate();
+
+  
+    useEffect(() => {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/login");
+        // console.log(token)
+
+      }
+    }, []);
   // const navigate = useNavigate();
   const {
     register,
