@@ -6,6 +6,8 @@ import Browse from './pages/Browse'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Community from './pages/Community'
+// import ScrollToTop from "./components/ScrollToTop";
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 function App() {
 
@@ -17,6 +19,11 @@ function App() {
       {
         path: "/Community",
         element: <Community/>,
+      },
+      {
+        path: "/ShowBooks/:id",
+        element: <ShowBook/>,
+
       },
       {
         path: "/AddBook",
@@ -38,8 +45,9 @@ function App() {
 
   return (
     <>
-        
+               {/* <ScrollToTop /> */}
        <RouterProvider router={router} />
+
       </>
   )
 }

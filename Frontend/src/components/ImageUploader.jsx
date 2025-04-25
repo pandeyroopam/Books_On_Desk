@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-const ImageUploader = () => {
-  const [files, setFiles] = useState([]);
+const ImageUploader = ({images, setImages}) => {
+  // const [files, setFiles] = useState([]);
 
   const handleImageChange = (e) => {
     const selectedFiles = [...e.target.files];
 
-    if (selectedFiles.length > 4) {
+    if (selectedFiles.length > 3) {
       alert("You can only upload up to 4 images.");
-      setFiles(selectedFiles.slice(0, 4));
+      setImages(selectedFiles.slice(0, 3));
     } else {
-      setFiles(selectedFiles);
+      setImages(selectedFiles);
     }
   };
 
@@ -20,13 +20,14 @@ const ImageUploader = () => {
         type="file"
         multiple
         accept="image/*"
+        className="border-2 border-gray-400  rounded-md p-2"
         onChange={handleImageChange}
       />
 
       {/* Image Thumbnails */}
       <div className="mt-4 flex gap-4 flex-wrap">
-        {files.length > 0 &&
-          files.map((file, index) => (
+        {images.length > 0 &&
+          images.map((file, index) => (
             <div key={index} className="w-24 h-24 relative border rounded-md overflow-hidden">
               <img
                 src={URL.createObjectURL(file)}

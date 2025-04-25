@@ -1,100 +1,160 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const ShowBook = () => {
   // Image paths stored in the 'public/images/' folder
-  const images = [
-    "/images/front.jpeg",
-    "/images/page1.png",
-    "/images/page2.png",
-    "/images/page3.png",
-  ];
+  const { id } = useParams();
+  const [book, setBook] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null); // Default: First image
 
-  const [selectedImage, setSelectedImage] = useState(images[0]); // Default: First image
+  const backendUrl = "http://localhost:5000";
+
+  useEffect(() => {
+    const fetchBook = async () => {
+      try {
+        const res = await axios.get(`/api/books/${id}`);
+        console.log(res.data);
+        setBook(res.data);
+
+        if (res.data.images && res.data.images.length > 0) {
+          const firstImage = res.data.images[0].url.startsWith("http")
+            ? res.data.images[0].url
+            : `${backendUrl}/${res.data.images[0].url}`;
+          setSelectedImage(firstImage);
+        }
+      } catch (error) {
+        console.error("Error fetching book data:", error.message);
+      }
+    };
+    fetchBook();
+  }, [id]);
 
   return (
     <>
-      <Navbar />
-      <div className=" h-full w-full flex justify-center">
-        <div className=" flex gap-6 m-5 p-5 w-10/12 ">
-          {/* This is an image section */}
-          <div className=" w-4/12 h-screen p-5">
-            <div>
-              <h1 className="font-medium font-sans text-lg text-gray-400 mx-5">
-              Thinking, Fast And Slow
-              </h1>
-            </div>
+        <Navbar />
+         
+        <div className=" h-full w-full flex justify-center">
 
-            <div className=" h-3/5 py-3 flex justify-center items-center ">
-              <img
-                src={selectedImage}
-                alt="Selected"
-                className="w-7/8 h-full object-cover rounded-lg shadow-lg inset-shadow-xs"
-              />
-            </div>
 
-            {/* Thumbnail Section */}
-            <div className="flex justify-between space-x-3 mt-2 inset-shadow-2xs shadow-xl p-2 rounded-md ">
-              {images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Page ${index}`}
-                  className={`w-15 h-12 border-2 rounded-md cursor-pointer transition-transform transform ${
-                    selectedImage === img
-                      ? "border-blue-500 scale-110"
-                      : "border-gray-300"
-                  }`}
-                  onClick={() => setSelectedImage(img)} // Click to update big preview
-                />
-              ))}
-            </div>
 
-            <div className="mt-5">
-              <button className="w-full border-green-700 border-2 px-4 py-2 rounded-2xl hover:bg-green-700 hover:text-white">
-                Rent
-              </button>
-            </div>
-          </div>
+
+
+
+
+
+      
+        <div className=" flex gap-8 m-5 p-5 w-10/12 mt-10 ">
+          
           {/* This consist of the details related to books */}
-          <div className=" w-8/12 h-screen p-5">
+          <div className=" w-6/12 h-screen p-5">
             <div>
-              <h1 className="font-serif text-4xl font-medium">
-                Thinking, Fast And Slow
-              </h1>
-              <h3 className="text-2xl mt-1 font-light">Daniel Kahneman</h3>
+              <h1 className="font-serif text-4xl font-medium">{book.title}</h1>
+              <h3 className="text-md mt-1 font-semibold">{book.author}</h3>
             </div>
+
+
+            <div className="flex gap-2 ">
+
+             <div className="border-b-2 border-b-gray-200"> 
+              <p>About The Book</p>
+             </div>
+
+             <div className="border-b-2 border-b-gray-200"> 
+              <p>About The Author</p>
+             </div>
+
+            </div>
+
+
+
+
+
+
+
 
             <div className="mt-1">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officia accusamus dolores minus ad. Nemo eum nam, quia dolorum
-                incidunt quis asperiores omnis, praesentium quibusdam sed harum
-                laborum! Quo dignissimos fuga necessitatibus facere unde
-                veritatis voluptatem ullam nesciunt, quasi, magnam deserunt
-                quibusdam libero, in asperiores aut esse. Quasi quaerat, saepe
-                placeat magnam soluta qui quia quis hic ab impedit vero, eaque
-                officia debitis aut minus odio, laborum perspiciatis commodi
-                nihil id autem nobis tenetur? Commodi ducimus, repudiandae ex
-                molestiae, iusto blanditiis voluptatibus quas quidem assumenda
-                laudantium excepturi tenetur? Dicta doloribus sequi fuga eveniet
-                dolores in commodi cumque maiores, earum velit unde.
-              </p>
+              <p>{book.description}</p>
             </div>
 
             <div className="flex gap-2 mt-1">
               <p className="text-gray-600">Genere</p>
               <p className="font-medium">
-                Nonfiction Psychology Self Help Business Personal Development
-                Philosophy Audiobook
+                { book.genre?.map((g, i) => (
+                  <span
+                    key={i}
+                    className="bg-gray-200 px-2 py-1 rounded-full text-sm"
+                  >
+                    {g}
+                  </span>
+                ))}
               </p>
+              <p><strong>Pages</strong>{book.pages}</p>
             </div>
-            <div className="mt-1 font-normal text-gray-600">
+
+             {/* button for rent or buy */}
+            <div className="mt-5">
+              <button
+                className={`w-full border-2 px-4 py-2 rounded-2xl transition duration-200 ${
+                  book.forRent
+                    ? "border-blue-700 hover:bg-blue-700 hover:text-white"
+                    : "border-green-700 hover:bg-green-700 hover:text-white"
+                }`}
+              >
+                {book.forRent ? "Rent" : "Buy"}
+              </button>
+            </div>
+            {/* right know i don't have this data so i'm possing it for now i will work on it letter on */}
+            {/* <div className="mt-1 font-normal text-gray-600">
               <p>499pages</p>
               <p>First published October 25, 2011</p>
-            </div>
+            </div> */}
           </div>
+
+          {/* This is an image section */}
+          <div className="flex gap-12 w-6/12 h-screen p-5">
+
+            <div className=" h-6/8 w-3/5 py-3 flex justify-center items-center "
+               style={{
+                 background: "#E9D9DA"
+               }}>
+              {selectedImage && (
+                <img
+                  src={selectedImage}
+                  alt="Selected"
+                  className="w-7/8 h-6/8 object-contain rounded-lg "
+                />
+              )}
+            </div>
+
+            {/* Thumbnail Section */}
+            <div className="flex flex-col gap-7 space-x-3  ">
+              {book.images?.map((img, index) => {
+                const fullImageUrl = img.url.startsWith("http")
+                ? img.url
+                : `${backendUrl}/${img.url}`;
+                return (
+                  <img
+                    key={index}
+                    src={fullImageUrl}
+                    alt={img.filename}
+                    className={`w-27 h-27 border-2  cursor-pointer transition-transform transform ${
+                      selectedImage === fullImageUrl
+                        ? "border-red-100 scale-110"
+                        : "border-none"
+                    }`}
+                    onClick={() => setSelectedImage(fullImageUrl)} // Click to update big preview
+                  />
+                );
+              })}
+            </div>
+
+           
+          </div>
+
+          
         </div>
       </div>
     </>

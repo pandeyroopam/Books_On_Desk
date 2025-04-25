@@ -1,7 +1,14 @@
 // Slides.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./CarouselDiv.css"
 const Slides = () => {
+
+    const handleLogin = () => {
+            const navigate = useNavigate();
+            navigate("/Login"); // This will redirect to the login page
+    }
+
   return [
     <div className="slide red" key="1">
         <div className="text-content">
@@ -31,7 +38,7 @@ const Slides = () => {
             <div className="connect-img">
 
             </div>
-            <button className="btn1 btn">
+            <button className="btn1 btn" onClick={handleLogin}>
                 log in
             </button>   
             <button className="btn2 btn">

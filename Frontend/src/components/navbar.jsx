@@ -28,11 +28,11 @@ const Navbar = () => {
               Browse
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <a className="content" href="#about">
               About
             </a>
-          </li>
+          </li> */}
           <li>
             <NavLink className="content" to="/AddBook">
               AddBooks

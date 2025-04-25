@@ -20,6 +20,10 @@ const listingSchema = new Schema({
         type: String,
         required: true,
     },
+    pages:{
+        type: Number,
+        required: true,
+    },
     price : Number,
     owner : {
         type: Schema.Types.ObjectId,

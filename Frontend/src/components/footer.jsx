@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
 
           <p> <br />
-            This is the web site which blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blas blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+          Books on Desk is a modern, community-centric platform designed to make books more accessible, affordable, and discoverable — right in your neighborhood.
           </p>
 
           </div>

@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
@@ -7,10 +6,7 @@ const User = require("../Models/users");
 
 const SECRET_KEY = "your_jwt_secret";
 
-//mongoose connect 
-mongoose.connect('mongodb://127.0.0.1:27017/jwt-auth', {
-  }).then(() => console.log('MongoDB connected'))
-    .catch(err => console.log('MongoDB Error:', err));
+
   
 
 // Signup route (optional)
