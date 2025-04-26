@@ -83,10 +83,12 @@ const AddBook = () => {
       alert("Please enter the isbn number");
       return;
     }
+
+    const Key = process.env;
     console.log(isbn);
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=AIzaSyBfO-Uet3ZbMeTXqkQmUgIqhvPlimIXX5Q
-`
+      `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=Key`;
+
     );
     const response = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`;
     console.log(res.data);
