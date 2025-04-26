@@ -1,24 +1,18 @@
 import React from "react";
-import "./Home.css";
+import "./home.css";
 import Navbar from "../components/navbar";
 import Carousel from "../components/carousel";
 import Mainbody from "../components/mainbody";
 import Footer from "../components/footer";
-import FormSection from "../components/formSection";
-const Home = () => {
+const home = () => {
   return (
     <>
-      <div className="nav-divs">
         <Navbar />
-      </div>
-      <div className="carousel-div">
+      <div className="carousel-div pt-0">
         <Carousel />
       </div>
-      <div className="landing-page-body">
+      <div className="landing-page-body ">
         <Mainbody />
-      </div>
-      <div className="form-input">
-        <FormSection />
       </div>
       <div className="Footer-div">
         <Footer />
@@ -27,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default home;
